@@ -1,0 +1,21 @@
+@namespace("com.sarya.graphql.service")
+protocol AvroSchemaTool {
+	record Product {
+		@logicalType("UUID")
+		string productId;
+		string name;
+		ProductType productType;
+		ProductStatus productStatus;
+		boolean active;
+	}
+
+	enum ProductType {
+		BIKE,
+		SCOOTER
+	}
+
+	enum ProductStatus {
+		AVAILABLE,
+		RENTED
+	}
+}
